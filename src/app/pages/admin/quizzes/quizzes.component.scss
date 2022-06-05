@@ -1,0 +1,33 @@
+.quiz-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  cursor: pointer;
+  .quiz-card {
+    width: auto;
+    margin: 1%;
+    .quiz-card-title {
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    .quiz-card-category {
+      color: gray;
+    }
+    .quiz-card-description {
+      font-size: 15px;
+      font-family: monospace;
+    }
+    .quiz-card-details {
+      .quiz-btn {
+        margin-right: 2%;
+      }
+    }
+  }
+}
+
+.quiz-btn-section {
+  text-align: end;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+

@@ -1,0 +1,17 @@
+<main class="dashboard-main">
+  <mat-toolbar class="ad-header">
+    <span *ngIf="sidenav && sidenav.mode == 'over'" class="material-icons-outlined" (click)="sidenav.toggle()">
+      {{ sidenav.opened ? 'clear' : 'segment'}}
+      </span>
+    Responsive Side Navigation
+  </mat-toolbar>
+
+  <app-sidenav (sidenavDetails)="sidenavDetails($event)"></app-sidenav>
+
+  <mat-toolbar class="ad-footer">
+    Responsive Side Navigation
+  </mat-toolbar>
+</main>
+
+
+

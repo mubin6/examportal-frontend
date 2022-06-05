@@ -1,0 +1,23 @@
+.add-quiz {
+  .add-quiz-header {
+    font-size: 18px;
+    padding: 12px 16px;
+    background: #f7f7f7;
+  }
+  .add-quiz-form {
+    margin-top: 4%;
+  }
+  .add-quiz-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .save-btn{
+      margin-right: 4%;
+    }
+  }
+  .quiz-subsection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

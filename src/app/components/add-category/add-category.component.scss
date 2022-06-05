@@ -1,0 +1,26 @@
+.add-category {
+  .add-category-header {
+    font-size: 18px;
+    padding: 12px 16px;
+    background: #f7f7f7;
+  }
+  .add-category-form {
+    margin-top: 4%;
+  }
+  .add-category-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .save-btn{
+      margin-right: 4%;
+    }
+  }
+}
+
+::ng-deep .mat-menu-panel {
+  max-width: none !important;
+}
+
+::ng-deep .mat-menu-content {
+  padding: 0 !important;
+}

@@ -1,0 +1,25 @@
+.category-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  cursor: pointer;
+  .category-card {
+    width: auto;
+    margin: 1%;
+    .category-card-title {
+      text-transform: uppercase;
+    }
+    .category-card-description {
+      font-size: 15px;
+      color: gray;
+      font-family: monospace;
+    }
+  }
+}
+
+.catg-btn-section {
+  text-align: end;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+

@@ -1,0 +1,35 @@
+<section class="add-category">
+  <mat-card class="add-category-header">Add Category</mat-card>
+  <form class="add-category-form" [formGroup]="categoryForm">
+    <mat-form-field class="w-100">
+      <input matInput placeholder="Title" formControlName="title" required>
+    </mat-form-field>
+
+    <div>
+      <mat-form-field class="w-100">
+        <textarea rows='10' matInput placeholder="Description" formControlName="description" required>
+        </textarea>
+        <mat-hint>
+          <span [matMenuTriggerFor]="menu" class="material-icons-outlined">sentiment_satisfied</span>
+          <!-- (click) ="toggleEmojiPicker()" -->
+        </mat-hint>
+      </mat-form-field>
+
+      <!-- *ngIf="showEmojiPicker" -->
+      <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
+        <mat-menu #menu="matMenu">
+          <!-- <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button> -->
+          <div class="emoji-wrapper">
+            <emoji-mart class="emoji-mart" set="{{set}}" (emojiSelect)="addEmoji($event)" title="Pick your emoji…"></emoji-mart>
+          </div>
+
+        </mat-menu>
+    </div>
+
+  </form>
+  <div class="add-category-btn">
+    <button [disabled]="!categoryForm.valid" class="save-btn" (click)="saveForm()" mat-raised-button color="primary">Save</button>
+    <button class="cancel-btn" (click)="cancel()" mat-raised-button>Cancel</button>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<main>
+  <div class="catg-btn-section">
+    <button (click)="openAddCategoryDialog()" mat-raised-button color='primary'>Add Category</button>
+  </div>
+  <section class="category-section">
+    <mat-card *ngFor="let category of categories" class="category-card">
+      <mat-card-title class="category-card-title">{{category.title}}</mat-card-title>
+      <mat-card-content class="category-card-description">{{category.description}}</mat-card-content>
+    </mat-card>
+  </section>
+</main>
+
+

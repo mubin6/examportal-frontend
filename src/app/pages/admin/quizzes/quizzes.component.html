@@ -1,0 +1,17 @@
+<main>
+  <div class="quiz-btn-section">
+    <button (click)="openAddQuizDialog()" mat-raised-button color='primary'>Add Quiz</button>
+  </div>
+  <section class="quiz-section">
+    <mat-card *ngFor="let quiz of quizzes" class="quiz-card">
+      <mat-card-title class="quiz-card-title">{{quiz.title}}</mat-card-title>
+      <mat-card-content class="quiz-card-category">{{quiz.category.title}}</mat-card-content>
+      <mat-card-content class="quiz-card-description">{{quiz.description}}</mat-card-content>
+      <mat-card-content class="quiz-card-details">
+        <button class="quiz-btn" color="primary" mat-stroked-button>Questions</button>
+        <button class="quiz-btn" color="primary" mat-stroked-button>Max. Marks: {{quiz.maxMarks}}</button>
+        <button class="quiz-btn" color="primary" mat-stroked-button>Total Questions: {{quiz.numberOfQuestions}}</button>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</main>
